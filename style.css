@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #fbeaff, #d5f4ff);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+  background: #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+h1, h2 {
+  color: #a855f7;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 80%;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #f472b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #ec4899;
+}
+
+.photo {
+  width: 45%;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.confetti {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🧹 Puzzle Styles */
+.puzzle-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.puzzle-reference {
+  width: 120px;
+}
+
+.reference-img {
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+#puzzleBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 columns */
+  grid-template-rows: repeat(3, 66px);     /* 3 rows: shorter height for landscape shape */
+  gap: 4px;
+  border: 2px dashed #a855f7;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.piece {
+  width: 100px;
+  height: 66px;
+  background-size: 300px 198px; /* full size of full image */
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+
+.piece.placed {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.puzzle-board.complete {
+  border: 3px solid #10b981;
+  background-color: #f0fff4;
+  animation: pulse 0.5s ease-in-out 3;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise for Mal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <section id="welcome" class="section active">
+      <h1>🎉 Happy Birthday, Mahal! 🎉</h1>
+      <p>Ready for a little brainy surprise?</p>
+      <button onclick="startGame()">Start Game</button>
+    </section>
+
+    <section id="game" class="section">
+      <h2>Guess the Answer</h2>
+      <p>What fruit is green on the outside, soft and yellow on the inside? </p>
+      <input type="text" id="guess" placeholder="Your answer here...">
+      <br>
+      <button onclick="checkAnswer()">Submit</button>
+      <p id="feedback"></p>
+    </section>
+
+    <section id="game2" class="section">
+      <h2>Solve the Puzzle 🌷</h2>
+      <p>Put the pieces together to reveal something sweet!</p>
+      <div class="puzzle-wrapper">
+        <div class="puzzle-reference">
+          <img src="assets/images/tulips.jpg" alt="Reference" class="reference-img">
+        </div>
+        <div class="puzzle-board" id="puzzleBoard">
+          <!-- Puzzle pieces will be added by JS -->
+        </div>
+      </div>
+      <p id="puzzleMessage"></p>
+    </section>
+
+    <section id="final" class="section">
+      <img src="assets/images/us.jpg" alt="You and Mal" class="photo">
+      <p class="message">
+        🎉Happy Birthday, Mahal!🎉 <br><br>
+        I made this brainy little game for the girl who’s got both beauty and brains.<br>
+        Hope it made you smile (and think a little). Just like how I always think of you.<br>
+         Minamahal kita palagii 💖
+      </p>
+<div class="confetti">🎊🎉🎊</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
