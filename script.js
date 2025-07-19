@@ -13,20 +13,6 @@ function checkAnswer() {
     return;
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const music = document.getElementById("bgMusic");
-  const toggleBtn = document.getElementById("musicToggle");
-
-  if (!music || !toggleBtn) return; // stop if button or audio not found
-
-  toggleBtn.addEventListener("click", () => {
-    music.muted = !music.muted;
-    toggleBtn.textContent = music.muted ? "🔇 Unmute Music" : "🔈 Mute Music";
-  });
-});
-
-
-
 
   if (guess === 'avocado') {
     alert("Yay! You got it right, Mahal! 🥑💚");
