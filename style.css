@@ -10,6 +10,27 @@ body {
   overflow: hidden;
 }
 
+.music-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(255, 102, 178, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.music-button:hover {
+  background-color: #e0559c;
+}
+
+
 .container {
   text-align: center;
   max-width: 700px;
