@@ -17,16 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const music = document.getElementById("bgMusic");
   const toggleBtn = document.getElementById("musicToggle");
 
+  if (!music || !toggleBtn) return; // stop if button or audio not found
+
   toggleBtn.addEventListener("click", () => {
-    if (music.muted) {
-      music.muted = false;
-      toggleBtn.textContent = "🔈 Mute Music";
-    } else {
-      music.muted = true;
-      toggleBtn.textContent = "🔇 Unmute Music";
-    }
+    music.muted = !music.muted;
+    toggleBtn.textContent = music.muted ? "🔇 Unmute Music" : "🔈 Mute Music";
   });
 });
+
 
 
 
