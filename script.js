@@ -13,6 +13,23 @@ function checkAnswer() {
     return;
   }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bgMusic");
+  const toggleBtn = document.getElementById("musicToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    if (music.muted) {
+      music.muted = false;
+      toggleBtn.textContent = "🔈 Mute Music";
+    } else {
+      music.muted = true;
+      toggleBtn.textContent = "🔇 Unmute Music";
+    }
+  });
+});
+
+
+
   if (guess === 'avocado') {
     alert("Yay! You got it right, Mahal! 🥑💚");
     feedback.textContent = 'Correct! 💚';
